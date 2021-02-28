@@ -1,0 +1,13 @@
+[Unit]
+Description=MyntProxy
+After=multi-user.target
+
+[Service]
+Type=idle
+Restart=always
+RestartSec=1
+WorkingDirectory=/opt/MyntProxy
+ExecStart=/usr/bin/python3 /opt/MyntProxy/main.py
+
+[Install]
+WantedBy=multi-user.target
